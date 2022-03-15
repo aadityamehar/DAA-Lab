@@ -10,18 +10,19 @@ disp(c);
 n = 4;
 
 for i = 1:n
-    if c(i:i) == 0
+    if c(i, i) == 0
         c(i, :) = c(i, :)
     else
         c(i,:) = c(i,:)/c(i,i)
+        end
 disp(c)
-for j = 1:n-1
-    if i+j < n+1
-        c(i+j, :) = c(i+j, :) - c(i+j, i) * c(i,:)
-    else
+    for j = 1:n-1
+        if i+j < n+1
+            c(i+j, :) = c(i+j, :) - c(i+j, i) * c(i,:)
+  
     end
     end
-    end  
+      
 end
 
 disp(c)
